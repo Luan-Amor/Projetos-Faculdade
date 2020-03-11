@@ -1,0 +1,79 @@
+/*Exercício 01*/
+.paragrafos{
+    border-left: 20em solid green;
+    border-right: 20em solid red;
+    width: 60%;
+    height: 400px;
+    font-size: 12px;
+    letter-spacing: 3em;
+    word-spacing: 4ex;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 25px;
+}
+
+.paragrafos::first-letter{
+    font-size: 36px;
+    color: blue;
+    text-decoration: overline;
+}
+
+.paragrafos::first-line{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/*Exercício 02*/
+/*A*/
+a.linkA{
+    text-decoration: none;
+}
+/*B*/
+.linkB:link{
+    text-decoration: overline;
+}
+.linkB:active{
+    text-decoration: line-through;
+}
+.linkB:visited{
+    text-decoration: underline;
+}
+/*C*/
+.linkC:link{
+    text-decoration: none;
+    color: orange;
+}
+
+.linkC:hover{
+    color: green;
+    text-decoration: underline;
+}
+/*D*/
+.linkD{
+    border: 1px solid blue;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+.linkD:hover{
+    border: 1px dotted black;
+    background-color: white;
+    color: black;
+}
+
+.linkE:link{
+    color: red;
+    text-decoration: none;
+}
+.linkE:visited{
+    font-style: italic;
+    font-weight: bold;
+    color: orange;
+}
+
+.linkE:hover{
+    text-decoration: underline;
+}
+.linkE:active{
+    color: green;
+}
