@@ -1,4 +1,15 @@
 /*Exercício 01*/
+body{
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+.exer1{ grid-row-start: 1;}
+.exer2{ grid-row-start: 2;}
+.exer3{ grid-row-start: 3;}
+.exer4{ grid-row-start: 4;}
+.exer5{ grid-row-start: 5;}
+.exer6{ grid-row-start: 6;}
+
 .paragrafos{
     border-left: 20em solid green;
     border-right: 20em solid red;
@@ -76,4 +87,82 @@ a.linkA{
 }
 .linkE:active{
     color: green;
+}
+
+/*Exercício 03*/
+
+.master{
+    position: absolute;
+    padding: 20px;
+    left: 300px;
+}
+
+.img1{
+    position: absolute;
+    z-index: 2;
+}
+.img1:hover{
+    z-index: 0;
+    opacity: 0;
+}
+
+.img2{
+    position: absolute;
+    z-index: 1;
+}
+
+/*Exercício 04*/
+
+.navGlobo{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+.navGlobo p{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.navGlobo p:hover{
+    text-decoration: overline;
+}
+
+/*Exercício 05*/
+.seta{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    opacity: 0;
+}
+
+ul li{
+    color: red;
+    font-size: 12;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    border-bottom: 1px dotted red;
+}
+ul li:hover .seta{
+    opacity: 1;
+}
+/*Exercício 06*/
+.exer6 div{
+    text-align: center;
+}
+
+
+.exer6 div a{
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+.exer6 div:hover a{
+    border-bottom: 2px solid red;
+}
+.exer6 div:hover img{
+    border: 2px solid red;
 }

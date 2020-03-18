@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            background: linear-gradient(45deg, red, green, blue);
+        }
+
+        .ball1{
+            position: absolute;
+            left: 150px;
+            top: 0;
+            animation: bola1 2s linear 0s 1 reverse;
+        }
+        .ball2{
+            position: absolute;
+            left: 350px;
+            top: 0;
+            animation: bola2 2s ease-in-out 2s 1 reverse; 
+        }
+        .ball3{
+            position: absolute;
+            left: 550px;
+            top: 0;
+            animation: bola3 2s ease-out 4s 1 reverse;
+        }
+
+        @keyframes bola1 {
+            0%{ top: 0px; }
+            25%{ top: 150px; left: 250px;
+                background: linear-gradient(30deg, pink, yellow, blue);}
+            50%{ top: 300px; 
+                background: linear-gradient(60deg, orange, white, green);
+                transform: scale(2);}
+            75%{ top: 150px; 
+                background: linear-gradient(90deg, black, purple, red);}
+            100%{top: 0px; 
+                background: linear-gradient(90deg, black, white, grey);}
+        }
+        @keyframes bola2 {
+            0%{ top: 0px; }
+            25%{ top: 150px; left: 500px;}
+            50%{ top: 300px;
+                transform: scale(0.1);
+            }
+            75%{ top: 150px; }
+            100%{top: 0px;}
+        }
+        @keyframes bola3 {
+            0%{ top: 1000px; }
+            25%{ top: 150px; left: 150px;}
+            50%{ top: 300px; transform: scaleZ(90deg); transform: scale(5)}
+            75%{ top: 150px; transform: scaleZ(180deg);}
+            100%{top: 0px; transform: scaleZ(90deg);}
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+    <div class="ball3"></div>
+</body>
+</html>
