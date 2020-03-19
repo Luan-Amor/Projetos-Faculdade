@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Lista de Exercícios JavaScript</h1>
+
+    <div>
+        <h2>Exercícios 01</h2>
+            <fieldset>
+                <legend>Mude o background</legend>
+                <button onclick="mudaBackgroundClick(this)">Vermelho</button>
+                <button onclick="mudaBackgroundClick(this)">Verde</button>
+                <button onclick="mudaBackgroundClick(this)">Azul</button>
+                <button onclick="mudaBackgroundClick(this)">Amarelo</button>
+            </fieldset>
+    </div>
+
+    <div>
+        <h2>Exercício 02</h2>
+        <a href="#" onmousemove="mudaBackgroundMove(this)">Rosa</a>
+        <a href="#" onmousemove="mudaBackgroundMove(this)">Roxo</a>
+        <a href="#" onmousemove="mudaBackgroundMove(this)">Laranja</a>
+        <a href="#" onmousemove="mudaBackgroundMove(this)">Marrom</a>
+    </div>
+
+    <div class="exer3">
+        <h2>Exercício 03</h2>
+        <ul>
+            <li><a href="#" onclick="listaDeCores(this)">Preto</a></li>
+            <li><a href="#" onclick="listaDeCores(this)">Branco</a></li>
+            <li><a href="#" onclick="listaDeCores(this)">Cinza Claro</a></li>
+            <li><a href="#" onclick="listaDeCores(this)">Cinza escuro</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Exercício 04</h2>
+        <P class="exer4">Lorem Ipsum é simplesmente uma simulação de texto 
+            da indústria tipográfica e de impressos, e vem 
+            sendo utilizado desde 
+        </P>
+        <button onclick="escondeParagrafo(this)">Ocultar Texto</button>
+    </div>
+    <div>
+        <h2>Exercício 05</h2>
+        <!-- <form action=""> -->
+            <fieldset>
+                <legend>Novo cadastro</legend>
+                <label>Nome:</label><br>
+                <input type="text" required placeholder="Login"><br>
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" required placeholder="Senha" name="senha1"><br>
+                <label for="confSenha">Confirmar:</label><br>
+                <input type="password" required  id="confSenha" placeholder="Confirme a senha" name="senha2"><br>
+                <button type="submit" onclick="validacaoSenha()">Enviar</button>
+            </fieldset>
+        <!-- </form> -->
+    </div>
+    <div>
+        <h2>Exercício 06</h2>
+        <h3>Verificar se a palavra é palindromo</h3>
+        <input type="text" placeholder="informe uma palavra." class='exer6'><br>
+        <button onclick="palindromo()">Verificar</button>
+
+    </div>
+    <div>
+        <h2>Exercício 07</h2>
+        <label>Nome:</label>
+        <input type="text" placeholder="Informe um nome" class="exer7">
+        <label>Nome:</label>
+        <input type="text" placeholder="Informe um nome" class="exer7">
+        <label>Nome:</label>
+        <input type="text" placeholder="Informe um nome" class="exer7">
+        <label>Nome:</label>
+        <input type="text" placeholder="Informe um nome" class="exer7">
+        <label>Nome:</label>
+        <input type="text" placeholder="Informe um nome" class="exer7">
+        <button onclick="inverterNomes()">Inverter</button>
+        <P class="parafExer7"></P>
+    </div>
+
+    <div>
+        <h2>Exercício 08</h2>
+        <form action="">
+                <label for="">Nome do Usário:</label><br>
+                <input type="text" placeholder="Nome"><br>
+
+                <input type="radio" name="cpfCnpj" value="cpf">Pessoa Física <br>
+                <input type="radio" name="cpfCnpj" value="cnpj">Pessoa Jurídica<br>
+
+                <span class="cpf">
+                    <label for="cpf">CPF</label><br>
+                    <input type="text" placeholder="CPF"><br>
+                    <label for="" >Data de Nascimento:</label><br>
+                    <input type="date" name="" id=""><br>
+                </span>
+                <span class="cnpj">
+                    <label for="">CNPJ</label><br>
+                    <input type="text" placeholder="CNPJ"><br>
+                </span>
+                
+                
+                <label for="">Endereço</label><br>
+                <input type="text" placeholder="Endereço"><br>
+                <label for="">CEP</label><br>
+                <input type="number" placeholder="CEP"><br>
+                <label for="">Telefone</label><br>
+                <input type="tel" name="" id=""><br>
+                <label for="">Email</label><br>
+                <input type="email" placeholder="user@email.con"><br>
+                <button type="button" >Enviar</button>
+     
+    </form>
+    </div>
+    <div>
+        <h2>Exercício 09</h2>
+        <!-- <form action=""> -->
+            Informe o Primeiro nome:
+            <input type="text" class="intecalaNomes" id="a"><br>
+            Informe o segundo nome:
+            <input type="text" class="intecalaNomes" id="b"><br>
+    
+            <p class="nomeIntercalado"></p>
+            <button type="submit" onclick="intercalaNomes(a, b)" >Intercalar</button></button>
+        <!-- </form> -->
+    </div>
+
+    <script>
+        //Exercício 01
+        function mudaBackgroundClick(e){
+            let body = document.getElementsByTagName('body')
+            cor = e.innerHTML
+            if(cor === "Vermelho")
+                body[0].style.backgroundColor = "red"
+            if(cor === "Verde")
+                body[0].style.backgroundColor = "green"
+            if(cor === "Azul")
+                body[0].style.backgroundColor = "blue"
+            if(cor === "Amarelo")
+                body[0].style.backgroundColor = "yellow"
+            else
+                return
+        }
+        //Exercício 02
+        function mudaBackgroundMove(e){
+            let body = document.getElementsByTagName('body')
+            cor = e.innerText
+
+            if(cor === "Rosa")
+                body[0].style.backgroundColor = "pink"
+            if(cor === "Roxo")
+                body[0].style.backgroundColor = "purple"
+            if(cor === "Laranja")
+                body[0].style.backgroundColor = "orange"
+            if(cor === "Marrom")
+                body[0].style.backgroundColor = "brown"
+            else
+                return
+
+        }
+        //Exercício 03
+        function listaDeCores(e){
+            let body = document.getElementsByTagName('body')
+            cor = e.innerHTML
+            if(cor === "Preto")
+                body[0].style.backgroundColor = "Black"
+            if(cor === "Branco")
+                body[0].style.backgroundColor = "white"
+            if(cor === "Cinza Claro")
+                body[0].style.backgroundColor = "#ccc"
+            if(cor === "Cinza escuro")
+                body[0].style.backgroundColor = "grey"
+            else
+                return
+        }
+        //exercíco 04
+        function escondeParagrafo(e){
+            let paragrado = document.querySelector('.exer4')
+            if(e.innerHTML === "Ocultar Texto"){
+                paragrado.style.opacity = 1
+                e.innerHTML = "Mostrar Texto"
+            }else{
+                paragrado.style.opacity = 0
+                e.innerHTML = "Ocultar Texto"
+            }
+        }
+        //Exercício 05
+        function validacaoSenha(){
+            let pwd = document.getElementById('senha').value
+            let pwd2 = document.getElementById('confSenha').value
+            if(pwd !== pwd2){
+                alert("senha diferente")
+                return
+            }
+            if(pwd.length < 6 || pwd.length > 10){
+                alert("O tamanho da senha deve conter de 6 a 10 caracteres")
+                return
+            }
+
+        }
+        //Exercício 06
+        function palindromo(){
+            let palavra = document.querySelector('.exer6').value
+            let reversa = palavra.split('').reverse().join('')
+            if(palavra.toLowerCase() === reversa.toLowerCase()){
+                alert('É palindromo')
+            }else{
+                alert('Não é palindromo')
+            }
+        }
+        //Exercício 07
+        function inverterNomes(){
+            let nomes = document.querySelectorAll('.exer7')
+            let p = document.querySelector('.parafExer7')
+            let texto = ''
+            nomes.forEach(e => {
+                texto += e.value + " "
+            })
+            p.innerHTML = texto.split('').reverse().join('')
+        }
+        //Exercício 08
+        radio = document.getElementsByName('cpfCnpj')
+        radio.forEach(e => {
+            e.addEventListener("click", a => {
+                if(e.value === "cpf"){
+                    document.querySelector('.cpf').style.display = 'block'
+                    document.querySelector('.cnpj').style.display = 'none'
+                }else{
+                    document.querySelector('.cpf').style.display = 'none'
+                    document.querySelector('.cnpj').style.display = 'block'
+                }
+            })
+        })
+        //Exercício 09
+        function intercalaNomes(nome, nome2){
+            let nomesJuntos = nome.value+nome2.value
+
+            nomeFinal = ''
+            let contPar = contImpar = 0
+            for(let i =0; i < nomesJuntos.length; i++){
+                if(i % 2 === 0){
+                    nomeFinal += nome.value[contPar]
+                    contPar++
+                }else{
+                    console.log()
+                    nomeFinal += nome2.value[contImpar]
+                    contImpar++
+                }
+            }
+            document.querySelector('.nomeIntercalado').innerHTML = nomeFinal
+        }
+    </script>
+
+</body>
+</html>
