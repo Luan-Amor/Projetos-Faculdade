@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+}
+
+.imagemCachorro{
+    width: 40%;
+
+}
+
+.imagemCachorro img{
+    width: 100%;
+    height: auto;
+}
+.texto{
+    width: 60%;
+    padding: 10px;
+}
+.texto p{
+    line-height: 40px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.texto p::first-letter{
+    font-size: 40px;
+}
+
+@media (max-width: 400px) {
+    .container{
+        flex-direction: column;
+    }
+    .imagemCachorro{
+        width: 100%;
+    }
+    .texto{
+        width: 100%;
+    }
+    .texto p{
+        line-height: 20px;
+        font-size: 15px;
+    }
+    .texto p::first-letter{
+        font-size: 30px;
+    }
+}
