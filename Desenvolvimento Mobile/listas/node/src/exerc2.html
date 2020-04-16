@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h1>Soma ou Subtração</h1>
+
+    <form action="/resultado" method="post">
+        <fieldset>
+            <legend>Soma</legend>
+
+            <label for="">Primeiro Valor</label>
+            <input type="number" name="v1"> <br>
+            <label for="">Segundo Valor</label> 
+            <input type="number" name="v2"><br>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+
+    <form action="/resultado" method="get">
+        <fieldset>
+            <legend>Subtração</legend>
+
+            <label for="">Primeiro Valor</label>
+            <input type="number" name="v1"><br>
+            <label for="">Segundo Valor</label>
+            <input type="number" name="v2"><br>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>

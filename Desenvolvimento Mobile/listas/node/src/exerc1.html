@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Node</title>
+
+    <style>
+        input{
+            display: block;
+            margin: 10px;
+        }
+        button{
+            border-radius: 5px;
+            width: 175px;
+            margin: 10px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lista Node</h1>
+    
+    <label for="">Informe a quantidade de números para serem somados</label><br><br>
+    <input type="number" id="numero" required>
+    <button onclick="criarCampos()">Criar</button>
+
+    <form id="newFields" action="/result" method="post"></form>
+
+
+
+    <script>
+
+        function criarCampos(){
+            let quantidade = document.getElementById('numero').value
+            let form = document.getElementById('newFields')
+            
+            for(let i = 0; i < quantidade; i++){
+                form.insertAdjacentHTML("afterbegin", `<input type='number' name=${"param"+i} required> `)   
+            }
+
+            form.insertAdjacentHTML("beforeend", "<button onclick='somarCampos()' type='submit'>Somar</button>")   
+        }
+
+        function somarCampos(){
+            let form = document.getElementById('newFields')
+
+            campos = form.children
+
+            for(let i = 0; i < campos-1; i++){
+                console.log(i)
+            }
+        }
+    </script>
+</body>
+</html>
