@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Projeto Mobile</string>
+    <string name="button_calculadora">Calculadora</string>
+    <string name="button_maps">Localização</string>
+    <string name="button_navegador">Navegador</string>
+    <string name="button_agenda_telefonica">Agenda Telefonica</string>
+    <string name="valor_inicial">0</string>
+    <string name="textoBrowser">Informe qual a url vc deseja abrir:</string>
+    <string name="Button_open">Abrir</string>
+    <string name="edit_url">URL</string>
+    <string name="btn_add_contant">Adicionar</string>
+</resources>
